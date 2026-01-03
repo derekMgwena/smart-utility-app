@@ -1,11 +1,12 @@
-backend/
 node_modules/
 *.log
-.env
 .env.local
-.env.production.local
+.env.development.local
+.env.test.local
 .git/
 README.md
 DEPLOYMENT-GUIDE.md
 DEPLOYMENT-STATUS.md
 IMPLEMENTATION_GUIDE.md
+frontend/dist/
+backend/.env
