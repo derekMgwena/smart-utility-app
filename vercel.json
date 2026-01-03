@@ -4,11 +4,12 @@
   "buildCommand": "cd frontend && npm ci && npm run build",
   "outputDirectory": "frontend/dist",
   "installCommand": "npm ci",
-  "functions": {
-    "backend/server.js": {
-      "runtime": "nodejs18.x"
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node@3.0.7"
     }
-  },
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
