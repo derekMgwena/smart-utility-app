@@ -1,0 +1,11 @@
+backend/
+node_modules/
+*.log
+.env
+.env.local
+.env.production.local
+.git/
+README.md
+DEPLOYMENT-GUIDE.md
+DEPLOYMENT-STATUS.md
+IMPLEMENTATION_GUIDE.md
