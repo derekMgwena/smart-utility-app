@@ -1,0 +1,23 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: smart-utility-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://derekmakhubela_db_user:Derek%4096@cluster0.ziguide.mongodb.net/smart_utility_db
+      - key: JWT_SECRET  
+        value: SmartUtility2026$SuperSecureJWTKey!ProductionReady#Derek@96
+      - key: JWT_EXPIRE
+        value: 30d
+      - key: RATE_LIMIT_WINDOW
+        value: 15  
+      - key: RATE_LIMIT_MAX
+        value: 100
